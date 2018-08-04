@@ -31,6 +31,7 @@ if (token) {
 }
 
 import Vue from "vue";
+import router from "./routes.js";
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -38,4 +39,6 @@ import Vue from "vue";
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-new Vue().$mount('#app');
+new Vue({
+    router
+}).$mount('#app');
