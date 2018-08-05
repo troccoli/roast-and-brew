@@ -1,6 +1,6 @@
 {
-    "name": "laravel/laravel",
-    "description": "The Laravel Framework.",
+    "name": "troccoli/roast-and-brew",
+    "description": "This is a repository for the 'API Driven Development With Laravel and VueJS' tutorial.",
     "keywords": ["framework", "laravel"],
     "license": "MIT",
     "type": "project",
