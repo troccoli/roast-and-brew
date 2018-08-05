@@ -17,6 +17,8 @@ trait CreatesApplication
 
         $app->make(Kernel::class)->bootstrap();
 
+        $this->baseUrl = config('app.url');
+
         return $app;
     }
 }
