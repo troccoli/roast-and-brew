@@ -16,8 +16,13 @@
     <script type='text/javascript'>
         window.Laravel = <?php echo json_encode([
             'csrfToken' => csrf_token(),
-        ]); ?>
+        ]); ?>;
+        window.Google = <?php echo json_encode([
+            'apiKey' => env('GOOGLE_MAPS_KEY'),
+        ]); ?>;
     </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key={{ env('GOOGLE_MAPS_KEY') }}"></script>
+
 </head>
 <body>
 
