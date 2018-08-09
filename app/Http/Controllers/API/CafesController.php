@@ -49,9 +49,7 @@ class CafesController extends Controller
      */
     public function postNewCafe(StoreCafeRequest $request)
     {
-        /*
-  Get the Latitude and Longitude returned from the Google Maps Address.
-*/
+        // Get the Latitude and Longitude returned from the Google Maps Address.
         $coordinates = GoogleMaps::geocodeAddress(
             $request->input('address'),
             $request->input('city'),
