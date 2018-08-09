@@ -33,7 +33,7 @@
 </script>
 
 <style scoped lang="scss">
-    @import '-@/abstracts/_variables.scss';
+    @import '@/abstracts/_variables.scss';
 
     nav.top-navigation {
         background-color: $white;
