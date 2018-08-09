@@ -89,7 +89,7 @@
                     this.infoWindows.push(infoWindow);
 
                     // Add the event listener to open the info window for the marker.
-                    marker.addListener('click', function() {
+                    marker.addListener('click', function () {
                         infoWindow.open(this.map, this);
                     });
                 }
@@ -113,8 +113,11 @@
 </script>
 
 <style scoped lang="scss">
-    div#cafe-map {
-        width: 100%;
-        height: 400px;
+    div#cafe-map{
+        position: absolute;
+        top: 50px;
+        left: 0px;
+        right: 0px;
+        bottom: 100px;
     }
 </style>
