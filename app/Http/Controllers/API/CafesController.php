@@ -3,8 +3,8 @@
 namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\StoreCafeRequest;
 use App\Models\Cafe;
-use Illuminate\Http\Request;
 
 class CafesController extends Controller
 {
@@ -42,11 +42,11 @@ class CafesController extends Controller
      * URL:         /api/v1/cafes
      * Method:      POST
      *
-     * @param Request $request
+     * @param StoreCafeRequest $request
      *
      * @return \Illuminate\Http\JsonResponse
      */
-    public function postNewCafe(Request $request)
+    public function postNewCafe(StoreCafeRequest $request)
     {
         $cafe = Cafe::create($request->only(['name', 'address', 'city', 'state', 'zip']));
 
