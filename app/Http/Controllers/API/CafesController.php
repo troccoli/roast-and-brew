@@ -19,7 +19,7 @@ class CafesController extends Controller
      */
     public function getCafes()
     {
-        return response()->json(Cafe::all());
+        return response()->json(Cafe::with('brewMethods')->get());
     }
 
     /**
@@ -34,7 +34,7 @@ class CafesController extends Controller
      */
     public function getCafe($id)
     {
-        return response()->json(Cafe::find($id));
+        return response()->json(Cafe::find($id)->with('brewMethods')->first());
     }
 
     /**
