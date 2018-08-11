@@ -24,23 +24,25 @@ class StoreCafeRequest extends FormRequest
     public function rules()
     {
         return [
-            'name'    => 'required',
-            'address' => 'required',
-            'city'    => 'required',
-            'state'   => 'required',
-            'zip'     => 'required|regex:/\b\d{5}\b/',
+            'name'                    => 'required',
+            'location.*.address'      => 'required',
+            'location.*.city'         => 'required',
+            'location.*.state'        => 'required',
+            'location.*.zip'          => 'required|regex:/\b\d{5}\b/',
+            'location.*.brew_methods' => 'sometimes|array',
+            'website'                 => 'nullable|url',
         ];
     }
 
     public function messages()
     {
         return [
-            'name.required'    => 'A name for the cafe is required.',
-            'address.required' => 'An address is required to add this cafe.',
-            'city.required'    => 'A city is required to add this cafe.',
-            'state.required'   => 'A state is required to add this cafe.',
-            'zip.required'     => 'A zip code is required to add this cafe.',
-            'zip.regex'        => 'The zip code entered is invalid.',
+            'name.required'               => 'A name for the cafe is required.',
+            'location.*.address.required' => 'An address is required to add this cafe.',
+            'location.*.city.required'    => 'A city is required to add this cafe.',
+            'location.*.state.required'   => 'A state is required to add this cafe.',
+            'location.*.zip.required'     => 'A zip code is required to add this cafe.',
+            'location.*.zip.regex'        => 'The zip code entered is invalid.',
         ];
     }
 }

@@ -17,7 +17,7 @@ class AddedCafeParentChildRelationship extends Migration
             $table->unsignedInteger('parent')->nullable();
             $table->string('location_name')->default('');
             $table->integer('roaster')->nullable();
-            $table->text('website')->default('');
+            $table->text('website')->nullable();
             $table->text('description')->default('');
             $table->unsignedInteger('added_by')->nullable();
 

@@ -28,25 +28,25 @@ export const brewMethods = {
                     commit('setBrewMethodsLoadStatus', 3);
                 });
         },
+    },
 
-        mutations: {
-            setBrewMethodsLoadStatus(state, status) {
-                state.brewMethodsLoadStatus = status;
-            },
-
-            setBrewMethods(state, brewMethods) {
-                state.brewMethods = brewMethods;
-            },
+    mutations: {
+        setBrewMethodsLoadStatus(state, status) {
+            state.brewMethodsLoadStatus = status;
         },
 
-        getters: {
-            getBrewMethodsLoadStatus(state) {
-                return state.brewMethodsLoadStatus;
-            },
+        setBrewMethods(state, brewMethods) {
+            state.brewMethods = brewMethods;
+        },
+    },
 
-            getBrewMethods(state) {
-                return state.brewMethods;
-            },
-        }
+    getters: {
+        getBrewMethodsLoadStatus(state) {
+            return state.brewMethodsLoadStatus;
+        },
+
+        getBrewMethods(state) {
+            return state.brewMethods;
+        },
     }
-};
+}   ;
