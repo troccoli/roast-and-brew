@@ -82,7 +82,21 @@ class CafesApiTest extends PassportTestCase
 
         $this->assertDatabaseMissing('cafes', ['name', $cafe->name]);
 
-        $response = $this->postJson('/api/v1/cafes', $cafe->toArray());
+        $postData = [
+            'name'      => $cafe->name,
+            'locations' => [
+                [
+                    'name'             => $cafe->name,
+                    'address'          => $cafe->address,
+                    'city'             => $cafe->city,
+                    'state'            => $cafe->state,
+                    'zip'              => $cafe->zip,
+                    'methodsAvailable' => [],
+                ],
+            ],
+        ];
+
+        $response = $this->postJson('/api/v1/cafes', $postData);
 
         $data = json_decode($response->getContent());
 
