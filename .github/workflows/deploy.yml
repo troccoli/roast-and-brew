@@ -31,4 +31,4 @@ jobs:
           host: ${{ secrets.DEPLOY_HOST }}
           username: ${{ secrets.DEPLOY_USERNAME }}
           key: ${{ secrets.DEPLOY_KEY }}
-          script: 'cd /var/www/html && ./server_deploy.sh'
+          script: 'cd /var/www/html && chmod u+x server_deploy.sh && ./server_deploy.sh'
